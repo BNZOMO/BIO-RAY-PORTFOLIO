@@ -1,0 +1,82 @@
+@page { size: A4 landscape; margin: 10mm 12mm; }
+
+@media print {
+  :root { --paper: #fff; }
+  html, body { width: 100%; margin: 0; background: #fff; font-size: 9pt; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .site-header, .skip-link, .menu-toggle, .cover-actions, .print-button, .enquiry-form { display: none !important; }
+  .page-section { width: 100%; height: 190mm; min-height: 0; max-height: 190mm; overflow: hidden; break-after: page; page-break-after: always; }
+  .page-section:last-child { break-after: auto; page-break-after: auto; }
+  .section-pad { padding: 7mm 8mm 6mm; }
+  .section-pad.solutions { padding-bottom: 4mm; }
+  .cover { height: 190mm; max-height: 190mm; padding: 19mm 18mm; }
+  .cover-image { animation: none; }
+  .cover-image img { object-position: center 48%; }
+  .cover h1 { font-size: 43pt; }
+  .cover-intro { max-width: 105mm; font-size: 11pt; }
+  .cover-index { right: 18mm; bottom: 8mm; left: 18mm; }
+  .section-topline { padding-bottom: 2mm; font-size: 7pt; }
+  h2 { font-size: 31pt; }
+  .challenge-layout { gap: 20mm; padding: 11mm 0 8mm; }
+  .challenge-layout h2 { font-size: 34pt; }
+  .challenge-band { min-height: 23mm; padding: 4mm 6mm; }
+  .solutions .section-heading { margin: 8mm 0 6mm; }
+  .solutions .section-heading h2 { font-size: 28pt; }
+  .service-grid { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2.5mm; }
+  .service-card { min-height: 55mm; padding: 2mm; }
+  .service-icon { display: none; }
+  .service-image { height: 16mm; aspect-ratio: auto; margin-bottom: 1.5mm; }
+  .service-card h3 { min-height: 9mm; margin-bottom: 1mm; font-size: 8pt; }
+  .service-card p { min-height: 6mm; margin-bottom: 1mm; font-size: 6pt; }
+  .service-card ul { font-size: 5.5pt; }
+  .approach-intro { margin: 10mm 0 7mm; }
+  .approach-intro h2 { font-size: 34pt; }
+  .process-item { min-height: 31mm; padding-top: 5mm; }
+  .why-layout { grid-template-columns: .8fr 1.2fr; gap: 14mm; padding-top: 15mm; }
+  .why-heading h2 { font-size: 30pt; }
+  .why-heading > p:not(.eyebrow) { margin: 6mm 0; }
+  .promise { min-height: 28mm; padding: 3mm 0; }
+  .about-layout { grid-template-columns: 1fr .9fr; gap: 15mm; padding-top: 13mm; }
+  .about-main h2, .beyond-heading h2 { font-size: 34pt; }
+  .about-tagline { margin-top: 7mm; }
+  .company-image { height: 25mm; margin-top: 5mm; }
+  .pillar { padding: 4mm 0; }
+  .serve-content { padding-top: 10mm; }
+  .serve-content h2 { font-size: 31pt; }
+  .serve-intro { margin: 3mm 0 4mm; font-size: 8pt; }
+  .serve-grid { grid-template-columns: repeat(3, 1fr); gap: 2.5mm; }
+  .serve-item { padding: 1.5mm; }
+  .serve-photo { height: 28mm; aspect-ratio: auto; margin-bottom: 1mm; }
+  .serve-item h3 { min-height: 8mm; padding: 0 1mm; font-size: 7pt; }
+  .beyond-layout { grid-template-columns: .8fr 1.2fr; gap: 15mm; padding-top: 13mm; }
+  .capability { min-height: 18mm; }
+  .projects .section-heading { margin: 7mm 0 5mm; }
+  .projects .section-heading h2 { font-size: 27pt; }
+  .project-gallery { grid-template-rows: 53mm 53mm; gap: 2.5mm; }
+  .major-projects-heading { margin: 5mm 0 3mm; }
+  .major-projects-heading .eyebrow { margin-bottom: 1mm; }
+  .major-projects-heading h2 { font-size: 23pt; }
+  .major-projects-heading > p:last-child { margin-top: 1mm; font-size: 7pt; }
+  .major-projects { gap: 1.5mm; }
+  .project-case:not([open]) > .project-case-gallery { display: grid; }
+  .project-case summary { min-height: 7mm; grid-template-columns: 8mm 1fr auto; gap: 2mm; padding: 1mm 2mm; }
+  .project-case-title { font-size: 8pt; }
+  .project-case-count { font-size: 6pt; }
+  .project-case-toggle { display: none; }
+  .project-case-gallery { grid-template-columns: repeat(3, 1fr); gap: 1.5mm; padding: 1.5mm 2mm 2mm; }
+  .project-case-gallery figure { height: 19mm; aspect-ratio: auto; }
+  .project-case-gallery .image-frame.is-placeholder::after { padding: 1mm; font-size: 5pt; letter-spacing: 0; }
+  .clients-content { padding-top: 12mm; }
+  .clients-content h2 { font-size: 32pt; }
+  .clients-intro { margin: 5mm auto 8mm; font-size: 9pt; }
+  .clients-logo-board { width: 100%; height: 75mm; aspect-ratio: auto; padding: 8mm; }
+  .clients-logo-board.is-placeholder::after { font-size: 9pt; }
+  .contact { padding-bottom: 5mm; }
+  .contact-layout { grid-template-columns: 1.1fr .9fr; gap: 12mm; padding: 12mm 0 8mm; }
+  .contact-copy h2 { font-size: 35pt; }
+  .contact-links a { min-height: 11mm; }
+  .site-footer { padding-top: 4mm; font-size: 7pt; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  a { text-decoration: none; }
+  .cover-actions, .form-submit { display: none !important; }
+  img { break-inside: avoid; }
+}
