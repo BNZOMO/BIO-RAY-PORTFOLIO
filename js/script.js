@@ -43,13 +43,15 @@ document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe
 const projectImageDialog = document.querySelector('.project-image-dialog');
 const projectImagePreview = document.querySelector('.project-image-preview');
 
-document.querySelector('.project-case-gallery').addEventListener('click', (event) => {
-  const image = event.target.closest('img');
-  if (!image || !image.naturalWidth) return;
+document.querySelectorAll('.project-case-gallery').forEach((gallery) => {
+  gallery.addEventListener('click', (event) => {
+    const image = event.target.closest('img');
+    if (!image || !image.naturalWidth) return;
 
-  projectImagePreview.src = image.currentSrc;
-  projectImagePreview.alt = image.alt;
-  projectImageDialog.showModal();
+    projectImagePreview.src = image.currentSrc;
+    projectImagePreview.alt = image.alt;
+    projectImageDialog.showModal();
+  });
 });
 
 document.querySelectorAll('.project-case-gallery img').forEach((image) => {
