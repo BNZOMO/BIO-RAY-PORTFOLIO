@@ -41,16 +41,28 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
 const projectImageDialog = document.querySelector('.project-image-dialog');
-const projectImagePreview = document.querySelector('.project-image-preview');
+const projectImageGallery = document.querySelector('.project-image-gallery');
 
 document.querySelectorAll('.project-case-gallery').forEach((gallery) => {
   gallery.addEventListener('click', (event) => {
-    const image = event.target.closest('img');
-    if (!image || !image.naturalWidth) return;
+    const clickedImage = event.target.closest('img');
+    if (!clickedImage || !clickedImage.naturalWidth) return;
 
-    projectImagePreview.src = image.currentSrc;
-    projectImagePreview.alt = image.alt;
+    const images = [...gallery.querySelectorAll('img')].filter((image) => image.naturalWidth);
+    const clickedIndex = images.indexOf(clickedImage);
+    projectImageGallery.replaceChildren(...images.map((image) => {
+      const preview = new Image();
+      preview.src = image.currentSrc;
+      preview.alt = image.alt;
+      return preview;
+    }));
     projectImageDialog.showModal();
+    requestAnimationFrame(() => {
+      projectImageGallery.focus({ preventScroll: true });
+      const firstImage = projectImageGallery.firstElementChild;
+      const activeImage = projectImageGallery.children[clickedIndex];
+      projectImageGallery.scrollLeft = activeImage.offsetLeft - firstImage.offsetLeft;
+    });
   });
 });
 
