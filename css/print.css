@@ -22,9 +22,9 @@
   .solutions .section-heading { margin: 8mm 0 6mm; }
   .solutions .section-heading h2 { font-size: 28pt; }
   .service-grid { grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 1fr); gap: 2.5mm; }
-  .service-card { min-height: 55mm; padding: 2mm; }
+  .service-card { min-height: 60mm; padding: 2mm; }
   .service-icon { display: none; }
-  .service-image { height: 16mm; aspect-ratio: auto; margin-bottom: 1.5mm; }
+  .service-image { height: 22mm; aspect-ratio: auto; margin-bottom: 1.5mm; }
   .service-card h3 { min-height: 9mm; margin-bottom: 1mm; font-size: 8pt; }
   .service-card p { min-height: 6mm; margin-bottom: 1mm; font-size: 6pt; }
   .service-card ul { font-size: 5.5pt; }
@@ -38,32 +38,36 @@
   .about-layout { grid-template-columns: 1fr .9fr; gap: 15mm; padding-top: 13mm; }
   .about-main h2, .beyond-heading h2 { font-size: 34pt; }
   .about-tagline { margin-top: 7mm; }
-  .company-image { height: 25mm; margin-top: 5mm; }
+  .company-image { height: 34mm; margin-top: 5mm; }
   .pillar { padding: 4mm 0; }
   .serve-content { padding-top: 10mm; }
   .serve-content h2 { font-size: 31pt; }
   .serve-intro { margin: 3mm 0 4mm; font-size: 8pt; }
   .serve-grid { grid-template-columns: repeat(3, 1fr); gap: 2.5mm; }
   .serve-item { padding: 1.5mm; }
-  .serve-photo { height: 28mm; aspect-ratio: auto; margin-bottom: 1mm; }
+  .serve-photo { height: 38mm; aspect-ratio: auto; margin-bottom: 1mm; }
   .serve-item h3 { min-height: 8mm; padding: 0 1mm; font-size: 7pt; }
   .beyond-layout { grid-template-columns: .8fr 1.2fr; gap: 15mm; padding-top: 13mm; }
   .capability { min-height: 18mm; }
-  .projects .section-heading { margin: 7mm 0 5mm; }
+  .projects { padding-top: 5mm; padding-bottom: 5mm; }
+  .projects .section-heading { margin: 4mm 0 3mm; }
   .projects .section-heading h2 { font-size: 27pt; }
-  .project-gallery { grid-template-rows: 53mm 53mm; gap: 2.5mm; }
+  .project-gallery { grid-template-rows: 62mm 62mm; gap: 2.5mm; }
+  .featured-projects { height: auto; max-height: none; overflow: visible; }
   .major-projects-heading { margin: 5mm 0 3mm; }
   .major-projects-heading .eyebrow { margin-bottom: 1mm; }
   .major-projects-heading h2 { font-size: 23pt; }
   .major-projects-heading > p:last-child { margin-top: 1mm; font-size: 7pt; }
-  .major-projects { gap: 1.5mm; }
+  .major-projects { display: block; }
+  .project-case { break-inside: avoid; page-break-inside: avoid; }
+  .project-case:not(:last-child) { break-after: page; page-break-after: always; }
   .project-case:not([open]) > .project-case-gallery { display: grid; }
   .project-case summary { min-height: 7mm; grid-template-columns: 8mm 1fr auto; gap: 2mm; padding: 1mm 2mm; }
   .project-case-title { font-size: 8pt; }
   .project-case-count { font-size: 6pt; }
   .project-case-toggle { display: none; }
   .project-case-gallery { grid-template-columns: repeat(3, 1fr); gap: 1.5mm; padding: 1.5mm 2mm 2mm; }
-  .project-case-gallery figure { height: 19mm; aspect-ratio: auto; }
+  .project-case-gallery figure { height: 55mm; aspect-ratio: auto; }
   .project-case-gallery .image-frame.is-placeholder::after { padding: 1mm; font-size: 5pt; letter-spacing: 0; }
   .clients-content { padding-top: 12mm; }
   .clients-content h2 { font-size: 32pt; }
